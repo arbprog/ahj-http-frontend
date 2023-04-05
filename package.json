@@ -1,0 +1,53 @@
+{
+  "name": "ahj-http-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "lint": "eslint .",
+    "test": "jest --testPathPattern=./src/ --verbose",
+    "coverage": "jest --testPathPattern=./src/ --coverage",
+    "e2e": "jest --testPathPattern=./e2e/ --runInBand",
+    "doc": "jsdoc -c jsdoc.conf.json",
+    "preshow:coverage": "npm run coverage",
+    "show:coverage": "live-server coverage/lcov-report",
+    "preshow:doc": "npm run doc",
+    "show:doc": "live-server doc",
+    "preshow:dist": "npm run build",
+    "show:dist": "live-server dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "babel-jest": "^29.5.0",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^5.0.0",
+    "eslint": "^8.37.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "live-server": "^1.2.2",
+    "mini-css-extract-plugin": "^2.7.5",
+    "moment": "^2.29.4",
+    "puppeteer": "^19.8.3",
+    "terser-webpack-plugin": "^5.3.7",
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.2",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "core-js": "^3.30.0"
+  }
+}
